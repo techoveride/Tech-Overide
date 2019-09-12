@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="1"
+        android:title="@string/refresh"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/new_tab"
+        android:orderInCategory="2"
+        android:title="@string/new_tab"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_bookmark"
+        android:orderInCategory="3"
+        android:title="@string/add_bookmark"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/history"
+        android:orderInCategory="4"
+        android:title="@string/history"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+</menu>

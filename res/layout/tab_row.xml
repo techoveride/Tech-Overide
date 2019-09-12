@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_tablayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/cardview_dark_background"
+        android:backgroundTint="@color/primaryColor">
+
+        <TextView
+            android:id="@+id/tab_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gabriela_regular"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:layout_marginRight="12dp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_constraintLeft_creator="1" />
+
+        <ImageButton
+            android:id="@+id/tab_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/search_view_drawer"
+            android:src="@drawable/ic_cancel" />
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

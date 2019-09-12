@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:itemIconTint="@color/primaryTextColor">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primaryDarkColor"
+                app:itemIconTint="@color/primaryTextColor"
+                app:popupTheme="@style/AppTheme.AppBarOverlay"
+                app:titleTextColor="#000000">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/address_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="9dp"
+                        android:background="@drawable/search_view_drawer"
+                        android:fontFamily="@font/gabriela_regular"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.7"
+                        android:imeOptions="actionGo"/>
+
+                    <ImageButton
+                        android:id="@+id/reload_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="9dp"
+                        android:background="@drawable/search_btn_drawer"
+                        android:src="@drawable/ic_go"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/address_bar" />
+
+                    <TextView
+                        android:id="@+id/tab_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/tab_count_view_drawer"
+                        android:fontFamily="@font/gabriela_regular"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/reload_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.777" />
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/progressBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="56dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="0.05" />
+
+            <ImageView
+                android:id="@+id/urlIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.95"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+
+        <!-- <include
+           layout="@layout/content_main"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent" /> -->
+        <!--   <android.support.constraint.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <WebView
+                   android:id="@+id/web_view"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:paddingTop="8dp"
+                   android:layout_marginBottom="64dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintHeight_default="percent"
+                   app:layout_constraintHeight_percent="0.833"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+           </android.support.constraint.ConstraintLayout> -->
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="46dp">
+
+            <include
+                layout="@layout/tab_main"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                tools:layout_editor_absoluteX="0dp" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom">
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_nav_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/windowBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:menu="@menu/navigation" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".Tabs.TabMenu"
+    android:background="@drawable/tab_count_view_drawer">
+
+    <TextView
+        android:id="@+id/tab_menu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryDarkColor"
+        android:gravity="center_horizontal"
+        android:text="Tab Menu"
+        android:textColor="@color/primaryColor"
+        android:fontFamily="@font/gabriela_regular"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/close_current_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/search_view_drawer"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:fontFamily="@font/gabriela_regular"
+        android:textColor="@color/primaryDarkColor"
+        android:text="Close current tab"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/close_other_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:fontFamily="@font/gabriela_regular"
+        android:background="@drawable/search_view_drawer"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:textColor="@color/primaryDarkColor"
+        android:text="Close other tabs"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/close_all_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/search_view_drawer"
+        android:clickable="true"
+        android:textColor="@color/primaryDarkColor"
+        android:focusable="true"
+        android:fontFamily="@font/gabriela_regular"
+        android:padding="8dp"
+        android:text="Close All Tabs"
+        android:textSize="16sp" />
+
+</LinearLayout>
